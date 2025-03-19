@@ -1,0 +1,17 @@
+@{
+    ViewBag.Title = "Random Object Generator";
+}
+
+<h2>Challenge A: Random Object Generator</h2>
+
+<p>Create a random alphabetical strings, real numbers, integers, alphanumerics. It will generate until a file reach 10MB size.</p>
+<p>Click the button below to generate the file</p>
+
+<form method="post" action="@Url.Action("GenerateFile", "RandomGenerator")">
+    <button type="submit" class="btn btn-primary">Generate File</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green; font-weight: bold;">@ViewBag.Message</p>
+}
