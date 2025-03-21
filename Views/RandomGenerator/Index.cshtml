@@ -7,9 +7,10 @@
 <p>Create a random alphabetical strings, real numbers, integers, alphanumerics. It will generate until a file reach 10MB size.</p>
 <p>Click the button below to generate the file</p>
 
-<form method="post" action="@Url.Action("GenerateFile", "RandomGenerator")">
-    <button type="submit" class="btn btn-primary">Generate File</button>
-</form>
+<a href="@Url.Action("GenerateFile", "RandomGenerator")" class="btn btn-primary">Generate & Download File</a>
+<br>
+<br>
+<p style="font-size:11px">Please double Click the button above if single Click not download.</p>
 
 @if (ViewBag.Message != null)
 {

@@ -19,6 +19,18 @@ app.MapControllerRoute(
     defaults: new { controller = "RandomGenerator", action = "Index" }
 );
 
+app.MapControllerRoute(
+    name: "ReadFile",
+    pattern: "ReadFile",
+    defaults: new { controller = "ReadFile", action = "Index" }
+);
+
+app.MapControllerRoute(
+    name: "Dockerize",
+    pattern: "Dockerizw",
+    defaults: new { controller = "Dockerize", action = "Index" }
+);
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

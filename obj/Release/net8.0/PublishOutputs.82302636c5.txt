@@ -1,0 +1,7 @@
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/SnappymobChallengeA
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/appsettings.json
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/SnappymobChallengeA.dll
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/SnappymobChallengeA.deps.json
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/SnappymobChallengeA.runtimeconfig.json
+/Users/arifirfaanzakaria/SnappymobChallengeA/bin/Release/net8.0/publish/SnappymobChallengeA.pdb

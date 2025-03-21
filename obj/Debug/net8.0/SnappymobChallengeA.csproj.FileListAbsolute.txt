@@ -28,3 +28,4 @@
 /Users/arifirfaanzakaria/SnappymobChallengeA/obj/Debug/net8.0/SnappymobChallengeA.pdb
 /Users/arifirfaanzakaria/SnappymobChallengeA/obj/Debug/net8.0/SnappymobChallengeA.genruntimeconfig.cache
 /Users/arifirfaanzakaria/SnappymobChallengeA/obj/Debug/net8.0/ref/SnappymobChallengeA.dll
+/Users/arifirfaanzakaria/SnappymobChallengeA/obj/Debug/net8.0/SnappymobChallengeA.sourcelink.json

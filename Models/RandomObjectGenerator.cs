@@ -6,6 +6,12 @@ namespace RandomObjectGenerator.Models
 {
     public static class RandomFileGenerator
     {
+
+    /// <summary>
+    /// The controller will call this function to Generate the file content of 4 random object,
+    /// it will generate the content until it reach 10MB
+    /// </summary>
+    /// <param name="filePath"></param>
         public static void GenerateFile(string filePath)
         {
             Random random = new Random();
@@ -19,10 +25,10 @@ namespace RandomObjectGenerator.Models
                 while (currentSize < targetSize)
                 {
                     count = count + 1;
-                    string randomString = GenerateAlphabeticalString();
-                    double randomRealNumber = random.NextDouble() * 100;
-                    int randomInteger = random.Next(1, 1000);
-                    string randomAlphaNumeric = GenerateAlphanumeric();
+                    string randomString = GenerateAlphabeticalString(); // random Alphabetical String
+                    double randomRealNumber = random.NextDouble() * 100; // random Real Number
+                    int randomInteger = random.Next(1, 1000); // random Integer
+                    string randomAlphaNumeric = GenerateAlphanumeric(); // random alphanumberic
 
                     // Add spaces before and after alphanumeric (max 10 spaces)
                     string spacedAlphanumeric = new string(' ', random.Next(1, 11)) + randomAlphaNumeric + new string(' ', random.Next(1, 11));
@@ -37,21 +43,10 @@ namespace RandomObjectGenerator.Models
             }
         }
 
-        private static string GenerateRandomObject()
-        {
-            Random random = new Random();
-            int type = random.Next(4);
-
-            return type switch
-            {
-                0 => GenerateAlphabeticalString(),
-                1 => GenerateRealNumber(),
-                2 => GenerateInteger(),
-                3 => GenerateAlphanumeric(),
-                _ => "Unknown"
-            };
-        }
-
+    /// <summary>
+    /// Function to generate random Alphabetical String between 5 to 15 characters
+    /// </summary>
+    /// <returns></returns>
         private static string GenerateAlphabeticalString()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -60,18 +55,10 @@ namespace RandomObjectGenerator.Models
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        private static string GenerateRealNumber()
-        {
-            Random random = new Random();
-            return (random.NextDouble() * 100).ToString("F2");
-        }
-
-        private static string GenerateInteger()
-        {
-            Random random = new Random();
-            return random.Next(1, 1000).ToString();
-        }
-
+    /// <summary>
+    /// this function generate Alphanumeric with 10 spaces before and after
+    /// </summary>
+    /// <returns></returns>
         private static string GenerateAlphanumeric()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

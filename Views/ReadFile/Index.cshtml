@@ -1,0 +1,50 @@
+@{
+    ViewBag.Title = "Read Uploaded File";
+}
+
+@model List<string>
+
+<h2>Challenge B: Read File from Challenge A</h2>
+
+<p>A program that will read the generated file above and print to the console the object and its type</p>
+<p>Click the button below to upload the file</p>
+
+<form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="ReadFile" onsubmit="showLoading()">
+    <input type="file" name="file" class="form-control" />
+    <button type="submit" class="btn btn-primary mt-2">Upload</button>
+</form>
+
+<!-- Loading Message -->
+<div id="loading" style="display: none; margin-top: 10px;">
+    <p style="color: blue; font-weight: bold;">
+        <img src="https://i.gifer.com/ZZ5H.gif" width="20" height="20" alt="Loading...">
+        Processing file... Please wait.
+    </p>
+</div>
+
+@if (Model != null && Model.Count > 0)
+{
+    <h3>File Contents:</h3>
+    <ul class="list-group">
+        @foreach (var line in Model)
+        {
+            <li class="list-group-item">@line</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Please upload a .txt file.</p>
+}
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green; font-weight: bold;">@ViewBag.Message</p>
+}
+
+
+<script>
+    function showLoading() {
+        document.getElementById("loading").style.display = "block";
+    }
+</script>

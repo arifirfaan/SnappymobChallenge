@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  challenge-b-mvc:
+    build: .
+    container_name: challenge-b-mvc-reader
+    volumes:
+      - "${PWD}/wwwroot/GeneratedFiles:/app/input"  # Mount input file (absolute path)
+      - "${PWD}/challenge-b-output:/app/output"  # Save processed output
+    ports:
+      - "5063:80"  # Ensure port is correct for your setup
+    environment:
+      - FILE_INPUT_PATH=/app/input/random_data.txt
+      - FILE_OUTPUT_PATH=/app/output/processed_data.txt
